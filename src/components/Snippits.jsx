@@ -27,7 +27,7 @@ const Snippits = () => {
     }
 
     function handleShare(snippitID) {
-        const url = location.pathname + '/' + snippitID;
+        const url = `${location.origin}${location.pathname}/${snippitID}`;
         navigator.clipboard.writeText(url);
         toast.success("Link Copied to clipboard");
     }
